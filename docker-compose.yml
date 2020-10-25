@@ -14,7 +14,7 @@ services:
       - ./data/zookeeper/data:/data
       - ./data/zookeeper/datalog:/datalog
 
-  kafka-1:
+  kafka1:
     image: confluentinc/cp-kafka:5.3.4
     hostname: kafka1
     ports:
@@ -31,7 +31,7 @@ services:
     depends_on:
       - zookeeper
 
-  kafka-2:
+  kafka2:
     image: confluentinc/cp-kafka:5.3.4
     hostname: kafka2
     ports:
@@ -48,7 +48,7 @@ services:
     depends_on:
       - zookeeper
 
-  kafka-3:
+  kafka3:
     image: confluentinc/cp-kafka:5.3.4
     hostname: kafka3
     ports:
